@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 @layer base {
   body {
     margin: 0;
@@ -39,16 +38,8 @@
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-[1.02];
   }
-=======
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background-color: #111827;
-  color: white;
 }
 
 #root {
   min-height: 100vh;
->>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
 }

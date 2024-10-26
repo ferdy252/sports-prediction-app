@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { TrendingUp, Settings, RefreshCw, History, Database, Star, Calendar } from 'lucide-react';
-import { Game, League } from './types';
+import { useState } from 'react';
+import { RefreshCw, History, Database, Star } from 'lucide-react';
+import { Game } from './types';
 import Navbar from './components/Navbar';
 import TopPredictions from './components/dashboard/TopPredictions';
 import QuickStats from './components/dashboard/QuickStats';
@@ -60,30 +59,6 @@ export default function App() {
           currentView={currentView} 
           onViewChange={setCurrentView} 
         />
-=======
-import { TrendingUp, Settings, RefreshCw, History, Database, Star } from 'lucide-react';
-import { Game } from './types';
-import GameCard from './components/GameCard';
-import Navbar from './components/Navbar';
-import LiveGames from './components/LiveGames';
-import FavoriteTeams from './components/FavoriteTeams';
-import PredictionDetails from './components/PredictionDetails';
-import HistoricalTrends from './components/HistoricalTrends';
-
-export default function App() {
-  const [selectedGameId, setSelectedGameId] = useState<number | null>(null);
-  const [currentView, setCurrentView] = useState<'dashboard' | 'trends'>('dashboard');
-  const [games] = useState<Game[]>([
-    // ... existing games data ...
-  ]);
-
-  const selectedGame = games.find(game => game.id === selectedGameId);
-
-  if (selectedGame) {
-    return (
-      <div className="min-h-screen bg-gray-900 text-white">
-        <Navbar onViewChange={setCurrentView} currentView={currentView} />
->>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
         <PredictionDetails
           game={selectedGame}
           onBack={() => setSelectedGameId(null)}
@@ -92,7 +67,6 @@ export default function App() {
     );
   }
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen">
       <Navbar 
@@ -157,23 +131,6 @@ export default function App() {
         )}
 
         {currentView === 'trends' && <HistoricalTrends />}
-=======
-  if (currentView === 'trends') {
-    return (
-      <div className="min-h-screen bg-gray-900 text-white">
-        <Navbar onViewChange={setCurrentView} currentView={currentView} />
-        <HistoricalTrends />
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Navbar onViewChange={setCurrentView} currentView={currentView} />
-      
-      <main className="container mx-auto px-4 py-6 space-y-6">
-        {/* ... existing dashboard content ... */}
->>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
       </main>
     </div>
   );

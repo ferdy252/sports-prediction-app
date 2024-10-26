@@ -1,5 +1,10 @@
-import React from 'react';
-import { ArrowLeft, Calendar, MapPin, Cloud, Trophy, TrendingUp, TrendingDown } from 'lucide-react';
+import { 
+  ArrowBack,
+  CalendarToday,
+  LocationOn,
+  Cloud,
+  EmojiEvents
+} from '@mui/icons-material';
 import { Game } from '../types';
 import ScorePrediction from './ScorePrediction';
 import OddsComparison from './OddsComparison';
@@ -21,7 +26,7 @@ export default function PredictionDetails({ game, onBack }: PredictionDetailsPro
         onClick={onBack}
         className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
       >
-        <ArrowLeft size={20} />
+        <ArrowBack sx={{ fontSize: 20 }} />
         Back to Dashboard
       </button>
 
@@ -34,7 +39,7 @@ export default function PredictionDetails({ game, onBack }: PredictionDetailsPro
             
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-gray-400">
-                <Calendar size={20} />
+                <CalendarToday sx={{ fontSize: 20 }} />
                 {gameDate.toLocaleDateString('en-US', {
                   weekday: 'long',
                   year: 'numeric',
@@ -46,19 +51,19 @@ export default function PredictionDetails({ game, onBack }: PredictionDetailsPro
               </div>
               
               <div className="flex items-center gap-2 text-gray-400">
-                <MapPin size={20} />
+                <LocationOn sx={{ fontSize: 20 }} />
                 Staples Center, Los Angeles
               </div>
               
               <div className="flex items-center gap-2 text-gray-400">
-                <Cloud size={20} />
+                <Cloud sx={{ fontSize: 20 }} />
                 Clear, 72°F
               </div>
             </div>
 
             <div className="mt-6">
               <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                <Trophy className="text-yellow-400" />
+                <EmojiEvents className="text-yellow-400" />
                 Prediction Summary
               </h2>
               <div className="bg-gray-700 p-4 rounded-lg">
