@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 export type League = 'NBA' | 'NFL' | 'NCAAF';
 
 export type Team = {
   name: string;
   league: League;
+=======
+export type Team = {
+  name: string;
+>>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
   recentForm: number[];
   avgScore: number;
   injuries?: string[];
@@ -10,7 +15,10 @@ export type Team = {
 
 export type Game = {
   id: number;
+<<<<<<< HEAD
   league: League;
+=======
+>>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
   status: 'upcoming' | 'live' | 'finished';
   startTime: string;
   currentScore?: {
@@ -39,6 +47,7 @@ export type Game = {
     home: number;
     away: number;
   }[];
+<<<<<<< HEAD
 };
 
 export type GameFilters = {
@@ -46,4 +55,6 @@ export type GameFilters = {
   team?: string;
   dateRange?: 'today' | 'week' | 'month';
   status?: 'upcoming' | 'live' | 'finished';
+=======
+>>>>>>> b103c380c06e5e96e8ae151762a5cb1fb7d5f4db
 };
