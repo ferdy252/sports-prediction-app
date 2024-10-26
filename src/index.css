@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-gray-800/70 backdrop-blur-lg border border-gray-700/50 shadow-xl;
+  }
+  
+  .gradient-border {
+    @apply relative rounded-lg overflow-hidden;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[1px];
+    background: linear-gradient(to right, #4ade80, #3b82f6);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-[1.02];
+  }
+}
